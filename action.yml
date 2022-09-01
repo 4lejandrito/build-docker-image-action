@@ -4,7 +4,7 @@ inputs:
   name:
     description: "Name of the image"
     required: false
-    default: "${{ github.event.repository.name }}"
+    default: "${{ env.GITHUB_REPOSITORY }}"
   context:
     description: "The folder to use as context"
     required: false
