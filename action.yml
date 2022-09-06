@@ -21,7 +21,7 @@ runs:
       with:
         images: ghcr.io/${{ github.repository }}
         tags: |
-          type=sha
+          type=raw,value=${{ github.sha }}
           type=raw,value=latest
     - name: Build Image
       uses: docker/build-push-action@v2
